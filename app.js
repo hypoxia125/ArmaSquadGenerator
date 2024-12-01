@@ -165,8 +165,6 @@ function processOutput() {
         squadDictionary[squads[squadIndex]].push({
             name: randomName, role
         });
-
-        squadIndex = (squadIndex + 1) % squads.length;
     });
 
     console.log(squadDictionary);
