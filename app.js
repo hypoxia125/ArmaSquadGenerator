@@ -27,14 +27,14 @@ function resetTemplate() {
     const playerNames = [
         "// Enter each player's name on a separate line",
         "",
-        "Emma",
-        "Noah",
-        "Lila",
-        "Ethan",
-        "Sofia",
-        "Liam",
-        "Ava",
-        "Oliver"
+        "Kerry",
+        "Miller",
+        "Anderson",
+        "Conway",
+        "Stavrou",
+        "Cooper",
+        "Miles",
+        "Armstrong"
     ];
     const playerNameString = playerNames.join("\n");
     document.getElementById("playerNameInputBox").value = playerNameString;
@@ -57,6 +57,7 @@ function resetTemplate() {
     const roleString = roles.join("\n");
     document.getElementById("availableClassesInputBox").value = roleString;
 
+    deleteSavedData();
     processOutput();
 }
 
@@ -208,6 +209,10 @@ function loadSavedData() {
         document.getElementById("availableClassesInputBox").value = savedRoles;
         console.log("Loaded roles from localStorage.");
     }
+}
+
+function deleteSavedData() {
+    localStorage.clear()
 }
 
 function saveDataToLocalStorage() {
