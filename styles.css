@@ -2,8 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Kumbh Sans", sans-serif;
+    font-family: sans-serif;
     overflow-x: hidden;
+}
+
+.swal2-x-mark-line-right,
+.swal2-x-mark-line-left {
+    font-size: 16px !important;
 }
 
 #backgroundIMG {
@@ -31,7 +36,7 @@
 }
 
 #navbar-logo {
-    color: #3CB371;
+    color: #3cb371;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -117,9 +122,9 @@
 #playerNameInputBox:focus,
 #availableClassesInputBox:focus,
 #squadOutputBox:focus {
-    border-color: #3CB371;
+    border-color: #3cb371;
     outline: none;
-    box-shadow: 0 0 5px #3CB371;
+    box-shadow: 0 0 5px #3cb371;
 }
 
 .buttonContainer {
