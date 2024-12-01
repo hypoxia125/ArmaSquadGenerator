@@ -24,7 +24,7 @@
 
 .navbar_container {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     height: 80px;
     background: rgba(0, 0, 0, 0.7);
@@ -42,21 +42,25 @@
     font-size: 2rem;
 }
 
-.navbar_btn {
-    display: flex;
-    align-items: center;
+.navbar_meh {
+    background-color: #3cb371;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    border: black;
+    border-radius: 4px;
+    display: inline-block;
 }
 
-.navbar_btn.mobile {
-    display: none;
+#meh_link {
+    text-decoration: none;
 }
 
-.navbar_btn.desktop {
-    display: flex;
-}
-
-.navbar_toggle {
-    display: none;
+#meh_link:visited {
+    text-decoration: none;
+    color: black
 }
 
 /* Main */
