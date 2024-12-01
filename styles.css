@@ -128,12 +128,12 @@
 }
 
 .buttonContainer {
-    text-align: center;
     grid-row: 3;
     grid-column: 2;
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    column-gap: 1rem;
 }
 
 .generate_button {
@@ -143,10 +143,11 @@
     font-weight: bold;
     border: 2px solid #1b5e20;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 0.5rem;
     cursor: pointer;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    width: 30%;
 }
 
 .generate_button:hover {
@@ -156,6 +157,31 @@
 
 .generate_button:active {
     background: #2e7d32;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transform: translateY(2px);
+}
+
+.reset_button {
+    background: linear-gradient(to bottom, #af4c4c, #7d2e2e);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #5e1b1b;
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: 30%;
+}
+
+.reset_button:hover {
+    background: linear-gradient(to bottom, #bb6666, #8a3333);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.reset_button:active {
+    background: #7d2e2e;
     box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4);
     transform: translateY(2px);
 }

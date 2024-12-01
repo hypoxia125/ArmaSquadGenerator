@@ -3,6 +3,7 @@
 
 // Set events
 document.getElementById("generate_button").addEventListener("click", processOutput);
+document.getElementById("reset_button").addEventListener("click", resetTemplate);
 
 // Set labels for boxes
 const playerNameInputBoxLabel = "Player Names";
@@ -11,39 +12,7 @@ document.getElementById("playerNameInputBoxLabel").textContent = playerNameInput
 const roleInputBoxLabel = "Squads And Roles";
 document.getElementById("roleInputBoxLabel").textContent = roleInputBoxLabel;
 
-// Set boxes with default data
-const playerNames = [
-    "// Enter each player's name on a separate line",
-    "",
-    "Emma",
-    "Noah",
-    "Lila",
-    "Ethan",
-    "Sofia",
-    "Liam",
-    "Ava",
-    "Oliver"
-];
-const playerNameString = playerNames.join("\n");
-document.getElementById("playerNameInputBox").value = playerNameString;
-
-const roles = [
-    "// Create squads using the '#' symbol",
-    "",
-    "#Alpha Squad",
-    "Squad Leader",
-    "Grenadier",
-    "Rifleman",
-    "Medic",
-    "",
-    "#Bravo Squad",
-    "Squad Leader",
-    "Grenadier",
-    "Rifleman",
-    "Engineer"
-];
-const roleString = roles.join("\n");
-document.getElementById("availableClassesInputBox").value = roleString;
+resetTemplate();
 
 // Load saved data from localStorage
 loadSavedData();
@@ -53,6 +22,44 @@ processOutput();
 
 // FUNCTIONS
 //------------------------------------------------------------------------------------------------
+function resetTemplate() {
+    // Set boxes with default data
+    const playerNames = [
+        "// Enter each player's name on a separate line",
+        "",
+        "Emma",
+        "Noah",
+        "Lila",
+        "Ethan",
+        "Sofia",
+        "Liam",
+        "Ava",
+        "Oliver"
+    ];
+    const playerNameString = playerNames.join("\n");
+    document.getElementById("playerNameInputBox").value = playerNameString;
+
+    const roles = [
+        "// Create squads using the '#' symbol",
+        "",
+        "#Alpha Squad",
+        "Squad Leader",
+        "Grenadier",
+        "Rifleman",
+        "Medic",
+        "",
+        "#Bravo Squad",
+        "Squad Leader",
+        "Grenadier",
+        "Rifleman",
+        "Engineer"
+    ];
+    const roleString = roles.join("\n");
+    document.getElementById("availableClassesInputBox").value = roleString;
+
+    processOutput();
+}
+
 function isCommentOrEmpty(line) {
     return line.startsWith("//") || line.trim() === "";
 }
