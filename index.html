@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arma Squad Generator</title>
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Font Awesome Link-->
+        <script
+            src="https://kit.fontawesome.com/7c4f1b343e.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <img src="/images/squad_wallpaper_invert.jpg" alt="" id="backgroundIMG" />
+        <header>
+            <nav
+                class="navbar"
+                role="navigation"
+                aria-label="Main Navigation"
+            ></nav>
+            <div class="navbar_container">
+                <a href="/" id="navbar-logo">Arma Squad Generator</a>
+            </div>
+        </header>
+
+        <main class="main">
+            <!-- Player Names Input Section -->
+            <div class="playerNameInputContainer">
+                <label for="playerNameInputBox" id="playerNameInputBoxLabel"></label>
+                <textarea id="playerNameInputBox" name="playerNameInputBox"></textarea>
+            </div>
+        
+            <!-- Available Role Names Input Section -->
+            <div class="availableClassesInputContainer">
+                <label for="availableClassesInputBox" id="roleInputBoxLabel"></label>
+                <textarea id="availableClassesInputBox" name="availableClassesInputBox"></textarea>
+            </div>
+        
+            <!-- Squad Output Section -->
+            <div class="squadOutputContainer">
+                <label for="squadOutputBox">Squad Output</label>
+                <textarea id="squadOutputBox" name="squadOutputBox" disabled></textarea>
+            </div>
+
+            <div class="buttonContainer">
+                <button class="generate_button" id="generate_button">GENERATE</button>
+            </div>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>
